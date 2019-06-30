@@ -2,5 +2,53 @@
 @{
     ViewData["Title"] = "Index-Admin";
 }
+<link rel="stylesheet" href="~/css/index-admin.css">
+
+<div class="container mt-5">
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="cards mt-5">
+                <div class="card fill-orange" data-card="0">
+                    <div class="icone-card"><img class="pl-4" src="~/images/icone-grafico.png" /></div>
+                    <div type="submit" class="card__detail">sua gestão na palma da mão.</div>
+                </div>
+                <div class="card fill-blue" data-card="1">
+                    <div class="icone-card"><img class="pl-4" src="~/images/icone-sacola.png" /></div>
+                    <div type="submit" class="card__detail" id="mapa-calor">quantas pessoas visitaram sua loja.</div>
+                </div>
+                <div class="card fill-green" data-card="2">
+                    <div class="icone-card"><img class="pl-4" src="~/images/icone-smile.png" /></div>
+                    <div type="submit" class="card__detail" id="satisfacao">seus clientes estão satisfeitos?</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('.card').mouseover(function () {
+            $('.card *').css('pointer-events', 'all');
+        });
+
+        $('#contador').click(function () {
+            window.location.href='@Url.Action("GetContador", "Home")';
+        });
+
+        $('#mapa-calor').click(function () {
+            window.location.href='@Url.Action("GetCalor", "Home")';
+        });
+
+        $('#satisfacao').click(function () {
+            window.location.href='@Url.Action("GetSatisfacao", "Home")';
+        });
+
+    });
+
+
+
+</script>

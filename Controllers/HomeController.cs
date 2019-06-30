@@ -10,6 +10,8 @@ namespace Titan.Controllers
 {
     public class HomeController : Controller
     {
+        public static string Tipo = "admin";
+
         public IActionResult Index()
         {
             return View();
@@ -17,11 +19,13 @@ namespace Titan.Controllers
 
         public IActionResult Login(string tipo)
         {
-            if (tipo.Equals("admin"))
+
+            Tipo = tipo;
+            if (Tipo.Equals("admin"))
             {
                 return View("IndexAdmin");
             }
-            else if (tipo.Equals("vendedor"))
+            else if (Tipo.Equals("vendedor"))
             {
                 return View("IndexVendedor");
             }
@@ -29,6 +33,42 @@ namespace Titan.Controllers
             return View("Index");
 
         }
+
+        [HttpGet]
+        public IActionResult GetContador() {
+
+            /*PEGA INFOS DO BANCO DO CONTADOR*/
+
+            /*CRIA MODELO*/
+
+            return View();
+
+        }
+
+        [HttpGet]
+        public IActionResult GetCalor()
+        {
+
+            /*PEGA INFOS DO BANCO DO CONTADOR*/
+
+            /*CRIA MODELO*/
+
+            return View();
+
+        }
+
+        [HttpGet]
+        public IActionResult GetSatisfacao()
+        {
+
+            /*PEGA INFOS DO BANCO DO CONTADOR*/
+
+            /*CRIA MODELO*/
+
+            return View();
+
+        }
+
 
 
 
