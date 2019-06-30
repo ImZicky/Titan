@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Mensagem";
+    ViewBag.NomePagina = "Mensagem";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card form-login mt-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-roxo border-bottom pb-4">O que gostaria de falar?</h5>
+                    <form asp-action="EnviaMensagem" asp-controller="home" method="post" onsubmit="alert('Mensagem enviada.');">
+                        <div class="form-group">
+                            <textarea name="mensagem" cols="40" rows="5" class="form-control mt-2" id="mensagem" placeholder="Sua Mensagem Aqui"></textarea>
+                        </div>
+                        <button class="btn btn-amarelo w-100 mt-2" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

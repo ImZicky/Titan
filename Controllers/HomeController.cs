@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Titan.Models;
+using Titan.Services;
 
 namespace Titan.Controllers
 {
@@ -30,8 +31,20 @@ namespace Titan.Controllers
 
         }
 
+        public IActionResult Mensagem()
+        {
+            return View();
+        }
 
+        public IActionResult EnviaMensagem(string mensagem)
+        {
+            if (mensagem != null)
+            {
+                Email.EnviaEmail(mensagem);
+            }
 
+            return View("Mensagem");
+        }
 
     }
 }
