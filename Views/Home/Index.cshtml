@@ -1,95 +1,30 @@
 ﻿@{
     ViewData["Title"] = "Login";
 }
-<style>
-
-    body {
-        background: #6b0356;
-    }
-
-    .text-roxo {
-        color: #6b0356;
-    }
-
-    .form-login {
-        width: 100%!important;
-        min-height: 400px;
-        background: #fff;
-    }
-
-    .fundo-roxo-claro {
-        background: #703264;
-    }
-
-    .text-amarelo {
-        color: #f0ce24;
-    }
-
-    .footer-index {
-        height: 12%;
-    }
-
-    .footer-p {
-        font-size: 23px;
-    }
-
-    .back-roxo-claro {
-        background: #703264;
-    }
-
-    .borda-roxo-escuro {
-        border-color: #f0ce24;
-        border: 1px;
-        border-style: solid;
-        border-radius: 3px;
-    }
-
-    .btn-amarelo {
-        background: #f0ce24;
-    }
-
-    .btn-amarelo:hover {
-        background: #6b0356;
-        color: #f0ce24;
-    }
-
-
-
-</style>
-
 
 <div class="container">
 
     <div class="row">
         <div class="col-12">
-
-            <div class="text-center">
-
-                <div class="card form-login mt-5">
-                    <div class="card-body">
-                        <h5 class="card-title text-center text-roxo border-bottom pb-4">Seja Bem-vindo(a)</h5>
-
-                        <form>
-                            <div class="form-group">
-                                <label for="email" class="text-left text-roxo mt-4">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Seu E-mail Aqui">
-
-                                <label for="senha" class="mt-4 text-roxo">Senha</label>
-                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Sua Senha Aqui">
-
-                                <label for="tipo" class="text-left text-roxo mt-4">Tipo de usuario</label>
-                                <select class="form-control" id="tipo" name="tipo">
-                                    <option class="back-roxo-claro text-roxo">Administrador</option>
-                                    <option class="back-roxo-claro text-roxo">Vendedor</option>
-                                </select>
-                            </div>
-                        </form>
-
-                        <button class="btn btn-amarelo w-100 mt-3">Logar</button>
-                    </div>
+            <div class="card form-login mt-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-roxo border-bottom pb-4">Seja Bem-vindo(a)</h5>
+                    <img class="ml-3" width="220" height="120" alt="logo" src="~/images/logo.png"/>
+                    <form asp-action="Login" asp-controller="home" method="post">
+                        <div class="form-group">
+                            <input type="email" class="form-control mt-2" id="email" name="email" placeholder="Seu E-mail Aqui">
+                            <input type="password" class="form-control mt-2" id="senha" name="senha" placeholder="Sua Senha Aqui">
+                            <select class="form-control mt-2" id="tipo" name="tipo">
+                                <option value="0" class="text-roxo">Tipo de usuario</option>
+                                <option value="admin" class="text-roxo">Administrador</option>
+                                <option value="vendedor" class="text-roxo">Vendedor</option>
+                            </select>
+                        </div>
+                    </form>
+                    <button class="btn btn-amarelo w-100 mt-2">Logar</button>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
+

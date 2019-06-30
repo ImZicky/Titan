@@ -15,7 +15,20 @@ namespace Titan.Controllers
             return View();
         }
 
+        public IActionResult Login(string tipo)
+        {
+            if (tipo.Equals("admin"))
+            {
+                return View("IndexAdmin");
+            }
+            else if (tipo.Equals("vendedor"))
+            {
+                return View("IndexVendedor");
+            }
 
+            return View("Index");
+
+        }
 
 
 

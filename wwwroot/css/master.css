@@ -1,0 +1,62 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed&display=swap');
+
+body {
+    background: #4d054d;
+}
+
+.text-roxo {
+    color: #6b0356;
+}
+
+.form-login {
+    width: 100% !important;
+    min-height: 300px;
+    background: #fff;
+    box-shadow: #00000050 2px 2px 2px;
+}
+
+.fundo-amarelo {
+    background: #f0ce24;
+}
+
+.text-amarelo {
+    color: #f0ce24;
+}
+
+.footer-index {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 10%;
+    border-radius: 90% 90% 0% 0%;
+}
+
+.footer-p {
+    font-size: 23px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.back-roxo-claro {
+    background: #703264;
+}
+
+.borda-amarelo {
+    border-color: #f0ce24; /*amarelo*/
+    border: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.btn-amarelo {
+    background: #f0ce24; /*amarelo*/
+    color: #703264;
+    font-weight: 600;
+}
+
+    .btn-amarelo:hover {
+        background: #fff;
+        border: 1px solid #6b0356;
+        color: #6b0356;
+    }
