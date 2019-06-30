@@ -2,30 +2,133 @@
 @{
     ViewData["Title"] = "Contador Loja";
 }
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<style>
+    #container {
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
+	margin: 0 auto
+}
+</style>
 
 <div class="container">
     <div class="row">
         <div class="col-12">
             <div class="card form-login mt-5">
-                <div class="card-body">
-                    <h5 class="card-title text-center text-roxo border-bottom pb-4">Seja Bem-vindo(a)</h5>
-                    <img class="ml-3" width="220" height="120" alt="logo" src="~/images/logo.png" />
-                    <form asp-action="Login" asp-controller="home" method="post">
-                        <div class="form-group">
-                            <input type="email" class="form-control mt-2" id="email" name="email" placeholder="Seu E-mail Aqui">
-                            <input type="password" class="form-control mt-2" id="senha" name="senha" placeholder="Sua Senha Aqui">
-                            <select class="form-control mt-2" id="tipo" name="tipo">
-                                <option value="0" class="text-roxo">Tipo de usuario</option>
-                                <option value="admin" class="text-roxo">Administrador</option>
-                                <option value="vendedor" class="text-roxo">Vendedor</option>
-                            </select>
+                <div class="card-body" style="text-align:center;">
+                    <div id="containerbar" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto;"></div>                    
+                        <h4 style="padding-top:40px;">Pessoas na loja</h4>
+                        <div class="col-12" style="text-align:center;font-weight:bold;font-size:2.5em;padding-bottom:40px;">
+                            7
                         </div>
-                        <button type="submit" class="btn btn-amarelo w-100 mt-2">Logar</button>
-                    </form>
+                        <div id="container"></div>
+                    @*<h5 class="card-title text-center text-roxo border-bottom pb-4">Seja Bem-vindo(a)</h5>*@
+
                 </div>
             </div>
         </div>
     </div>
+    <div class="row" style="padding-top:40px;">
+        <div class="col-6">
+            <h5 style="color: #fff;">Data Inicial</h5>
+            <input type="date" class="form-control" />
+        </div>
+        <div class="col-6">
+            <h5 style="color: #fff;">Data Final</h5>
+            <input type="date" class="form-control" />
+        </div>
+    </div>
 </div>
 
+<script>
+    Highcharts.chart('container', {
+
+    title: {
+        text: 'Fluxo de pessoas'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Number of Employees'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 10
+        }
+    },
+
+    series: [{
+        name: 'Hoje',
+        data: [2, 5, 3, 1, 5, 3, 4, 5]
+    }, {
+        name: 'Ontem',
+        data: [1, 2, 1, 1, 4, 2, 1, 2]
+    }, {
+        name: 'Anteontem',
+        data: [0, 1, 2, 0, 3, 2, 1, 2]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+    });
+
+    Highcharts.chart('containerbar', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Pessoas na semana'
+    },
+    xAxis: {
+        categories: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ''
+        }
+    },
+    legend: {
+        reversed: true
+    },
+    plotOptions: {
+        series: {
+            stacking: 'normal'
+        }
+    },
+    series: [{
+        name: 'Número de pessoas',
+        data: [50,10,20,30,10]
+    }]
+});
+
+</script>
 

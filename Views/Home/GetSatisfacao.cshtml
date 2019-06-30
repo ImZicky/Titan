@@ -8,20 +8,149 @@
         <div class="col-12">
             <div class="card form-login mt-5">
                 <div class="card-body">
-                    <h5 class="card-title text-center text-roxo border-bottom pb-4">Seja Bem-vindo(a)</h5>
-                    <img class="ml-3" width="220" height="120" alt="logo" src="~/images/logo.png" />
-                    <form asp-action="Login" asp-controller="home" method="post">
-                        <div class="form-group">
-                            <input type="email" class="form-control mt-2" id="email" name="email" placeholder="Seu E-mail Aqui">
-                            <input type="password" class="form-control mt-2" id="senha" name="senha" placeholder="Sua Senha Aqui">
-                            <select class="form-control mt-2" id="tipo" name="tipo">
-                                <option value="0" class="text-roxo">Tipo de usuario</option>
-                                <option value="admin" class="text-roxo">Administrador</option>
-                                <option value="vendedor" class="text-roxo">Vendedor</option>
-                            </select>
+                    <h5 class="card-title text-center text-roxo border-bottom pb-4">Satisfação</h5>
+
+                    <div class="row">
+                        <div class="col-4" style="text-align:center;font-size:1.5em;font-weight:bold;">
+                            <br />
+                            Cama
                         </div>
-                        <button type="submit" class="btn btn-amarelo w-100 mt-2">Logar</button>
-                    </form>
+                        <div class="col-8">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-3" style="padding-left:0px;padding-right:0px;text-align:right;">
+                                                <img src="~/images/feliz.png" style="width:65%;" />
+                                            </div>
+                                            <div class="col-6" style="font-size:1em;width:103px;text-align:center;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                Feliz
+                                            </div>
+                                            <div class="col-3" style="font-size:1.5em;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                30
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-3" style="padding-left:0px;padding-right:0px;text-align:right;">
+                                                <img src="~/images/neutro.png" style="width:65%;" />
+                                            </div>
+                                            <div class="col-6" style="font-size:1em;width:103px;text-align:center;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                Neutro
+                                            </div>
+                                            <div class="col-3" style="font-size:1.5em;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                10
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-3" style="padding-left:0px;padding-right:0px;text-align:right;">
+                                                <img src="~/images/feliz.png" style="width:65%;" />
+                                            </div>
+                                            <div class="col-6" style="font-size:1em;width:103px;text-align:center;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                Triste
+                                            </div>
+                                            <div class="col-3" style="font-size:1.5em;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                20
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top:50px;">
+                        <div class="col-4" style="text-align:center;font-size:1.5em;font-weight:bold;">
+                            <br />
+                            Mesa
+                        </div>
+                        <div class="col-8">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-3" style="padding-left:0px;padding-right:0px;text-align:right;">
+                                                <img src="~/images/feliz.png" style="width:65%;" />
+                                            </div>
+                                            <div class="col-6" style="font-size:1em;width:103px;text-align:center;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                Feliz
+                                            </div>
+                                            <div class="col-3" style="font-size:1.5em;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                30
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-3" style="padding-left:0px;padding-right:0px;text-align:right;">
+                                                <img src="~/images/neutro.png" style="width:65%;" />
+                                            </div>
+                                            <div class="col-6" style="font-size:1em;width:103px;text-align:center;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                Neutro
+                                            </div>
+                                            <div class="col-3" style="font-size:1.5em;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                10
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-3" style="padding-left:0px;padding-right:0px;text-align:right;">
+                                                <img src="~/images/feliz.png" style="width:65%;" />
+                                            </div>
+                                            <div class="col-6" style="font-size:1em;width:103px;text-align:center;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                Triste
+                                            </div>
+                                            <div class="col-3" style="font-size:1.5em;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                20
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top:50px;">
+                        <div class="col-4" style="text-align:center;font-size:1.5em;font-weight:bold;">
+                            <br />
+                            Banho
+                        </div>
+                        <div class="col-8">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-3" style="padding-left:0px;padding-right:0px;text-align:right;">
+                                                <img src="~/images/feliz.png" style="width:65%;" />
+                                            </div>
+                                            <div class="col-6" style="font-size:1em;width:103px;text-align:center;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                Feliz
+                                            </div>
+                                            <div class="col-3" style="font-size:1.5em;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                30
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-3" style="padding-left:0px;padding-right:0px;text-align:right;">
+                                                <img src="~/images/neutro.png" style="width:65%;" />
+                                            </div>
+                                            <div class="col-6" style="font-size:1em;width:103px;text-align:center;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                Neutro
+                                            </div>
+                                            <div class="col-3" style="font-size:1.5em;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                10
+                                            </div>
+                                        </div>
+                                        <div class="row" style="padding-bottom:10px;">
+                                            <div class="col-3" style="padding-left:0px;padding-right:0px;text-align:right;">
+                                                <img src="~/images/feliz.png" style="width:65%;" />
+                                            </div>
+                                            <div class="col-6" style="font-size:1em;width:103px;text-align:center;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                Triste
+                                            </div>
+                                            <div class="col-3" style="font-size:1.5em;font-weight:bold;padding-left:0px;padding-right:0px;">
+                                                20
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
