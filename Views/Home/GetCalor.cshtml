@@ -6,25 +6,66 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div class="card form-login mt-5">
-                <div class="card-body">
-                    <h5 class="card-title text-center text-roxo border-bottom pb-4">Seja Bem-vindo(a)</h5>
-                    <img class="ml-3" width="220" height="120" alt="logo" src="~/images/logo.png" />
-                    <form asp-action="Login" asp-controller="home" method="post">
-                        <div class="form-group">
-                            <input type="email" class="form-control mt-2" id="email" name="email" placeholder="Seu E-mail Aqui">
-                            <input type="password" class="form-control mt-2" id="senha" name="senha" placeholder="Sua Senha Aqui">
-                            <select class="form-control mt-2" id="tipo" name="tipo">
-                                <option value="0" class="text-roxo">Tipo de usuario</option>
-                                <option value="admin" class="text-roxo">Administrador</option>
-                                <option value="vendedor" class="text-roxo">Vendedor</option>
-                            </select>
+            <div class="mt-5 bg-light">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h2 class="text-roxo text-center">Manhã</h2>
+                            <div id="manha" class="w-100">
+                                <canvas id="manhaCanvas" style="width:100%; height: auto;"></canvas>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-amarelo w-100 mt-2">Logar</button>
-                    </form>
+                        <div class="carousel-item">
+                            <h2 class="text-roxo text-center">Tarde</h2>
+                            <div id="tarde" class="w-100">
+                                <canvas id="tardeCanvas" style="width:100%; height: auto;"></canvas>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h2 class="text-roxo text-center">Noite</h2>
+                            <div id="noite" class="w-100">
+                                <canvas id="noiteCanvas" style="width:100%; height: auto;"></canvas>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon  bg-warning rounded-circle p-1 rounded" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon bg-warning rounded-circle p-1 rounded" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+
+        var localPintura;
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.lineTo(xFinal, yInicial);
+        context.lineTo(xInicial, yInicial);
+        context.lineTo(xInicial, yFinal);
+        context.lineTo(xFinal, yFinal);
+        context.closePath();
+        context.fill();
+
+
+    });
+
+
+
+
+
+</script>
